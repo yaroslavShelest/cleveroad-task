@@ -26,8 +26,6 @@ const Astronams = ({astronams}) => {
                 ))
                }
          </Table>
-     
-    
      <b>Всего на МКС сейчас находится {astronams.length} человека .</b>
     </>
   );

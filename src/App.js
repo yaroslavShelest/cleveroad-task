@@ -13,13 +13,12 @@ import MyMap from './containers/Maps';
 import './App.css';
 
 function App(props) {
-
   return ( 
   <>
-  
   <Container >
-     <div className = "title" > 
-      < h1  > Международная Космическая Станция (МКС) </h1></div >
+    <div className = "title" > 
+        <h1> Международная Космическая Станция (МКС) </h1>
+    </div >
     <Row>
        <Col> 
           <Locations />
@@ -29,12 +28,12 @@ function App(props) {
        </Col>
     </Row>
     <Row>
-    <Col> 
-    <MyMap сoordinate={props.location} />
-    </Col>
-      <Col> 
-        <Astronams />
-      </Col>
+        <Col> 
+          <MyMap сoordinate={props.location} />
+        </Col>
+        <Col> 
+          <Astronams />
+        </Col>
     </Row>
   </Container> 
   </>

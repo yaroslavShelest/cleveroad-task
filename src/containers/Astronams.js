@@ -14,8 +14,7 @@ class AstronamsContainer extends React.Component {
 
      render() {
           setInterval(() => (  
-          this.props.setAstronams(),
-          this.props.setLocation()  ), 5000);
+          this.props.setLocation()  ), 7000);
           return ( 
           <div>
           <Astronams {...this.props}/> 

@@ -57,15 +57,18 @@ import { Map as LeafletMap, TileLayer, Marker, Popup } from 'react-leaflet';
 
 class MyMap extends React.Component {
   render() {
-     let positionLat;
-     let positionLong;
- console.log(this.props.сoordinate)
-     // if (this.props.coords) {
-     //   positionLat = this.props.coords.iss_position.latitude;
-     //   positionLong = this.props.coords.iss_position.longitude;
+    
+ 
+     if (!this.props.сoordinate) {
+          return null
+     }
+      const positionLat = this.props.сoordinate.iss_position.latitude;
+      const positionLong = this.props.сoordinate.iss_position.longitude;
+     
+     console.log(positionLat)
     return (
       <LeafletMap
-        center={['-48.6128','118.7420']}
+        center={[positionLong,positionLat]}
         zoom={6}
         maxZoom={10}
         attributionControl={true}
@@ -79,9 +82,9 @@ class MyMap extends React.Component {
         <TileLayer
           url='http://{s}.tile.osm.org/{z}/{x}/{y}.png'
         />
-        <Marker position={['-48.6128','118.7420' ]}>
+        <Marker position={[positionLong,positionLat]}>
           <Popup>
-            Popup for any custom information.
+           Для разной информации
           </Popup>
         </Marker>
       </LeafletMap>

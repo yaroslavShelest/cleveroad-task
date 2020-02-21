@@ -12,12 +12,10 @@ class LocationContainer extends React.Component {
      };
 
      render() {
-    
           return ( 
           <div>
-          <Location {...this.props}/> 
-          
-         </div>
+               <Location {...this.props}/>   
+          </div>
          )
       }
 };
