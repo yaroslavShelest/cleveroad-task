@@ -14,7 +14,7 @@ class MyMap extends React.Component {
      console.log(positionLat)
     return (
       <LeafletMap
-        center={[positionLong,positionLat]}
+        center={[positionLat ,positionLong]}
         zoom={6}
         maxZoom={10}
         attributionControl={true}
@@ -28,7 +28,7 @@ class MyMap extends React.Component {
         <TileLayer
           url='http://{s}.tile.osm.org/{z}/{x}/{y}.png'
         />
-        <Marker position={[positionLong,positionLat]}>
+        <Marker position={[positionLat ,positionLong]}>
           <Popup>
            Для разной информации
           </Popup>
